@@ -94,6 +94,16 @@ LatexCmds.dot = P(MathCommand, function(_, super_) {
     };
 });
 
+LatexCmds.undersim = P(MathCommand, function(_, super_) {
+  _.init = function() {
+      super_.init.call(this, '\\undersim', '<span class="mq-underset mq-overunder mq-non-leaf">'
+          + '<span class="mq-over">&0</span>'
+          + '<span class="mq-under">&#126;</span>'
+          + '</span>'
+      );
+  };
+});
+
 LatexCmds.underset = P(MathCommand, function(_, super_) {
   _.ctrlSeq = '\\underset';
   _.htmlTemplate =
