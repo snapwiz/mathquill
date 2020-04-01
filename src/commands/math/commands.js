@@ -94,6 +94,12 @@ LatexCmds.dot = P(MathCommand, function(_, super_) {
     };
 });
 
+LatexCmds.square = P(MathCommand, function(_, super_){
+  _.init = function() {
+    super_.init.call(this, '\\square', '<span class="mq-non-leaf mq-square" />');
+  };
+});
+
 LatexCmds.undersim = P(MathCommand, function(_, super_) {
   _.init = function() {
       super_.init.call(this, '\\undersim', '<span class="mq-underset mq-overunder mq-non-leaf">'
