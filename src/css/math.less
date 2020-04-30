@@ -406,6 +406,46 @@
     }
   }
 
+  .mq-xrightarrow {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 0 0.22em;
+
+    .mq-xrightarrow-right {
+      width: 100%;
+      min-width: 1.2em;
+      height: 0.452em;
+      overflow: hidden;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    .mq-xrightarrow-text {
+      font-size: 0.95rem;
+
+      &.mq-empty {
+        min-width: 0.8em;
+      }
+
+      &.top {
+        margin-bottom: 0.18rem;
+      }
+
+      &.bottom {
+        margin-top: 0.18rem;
+      }
+    }
+    
+    svg {
+      width: 100%;
+      height: inherit;
+      position: absolute;
+    }
+  }
+
   .mq-matrix {
     vertical-align: middle;
     margin-left: 0.1em;
