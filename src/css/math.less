@@ -362,57 +362,87 @@
   }
 
   .mq-overarrow {
-    min-width: 0.5em;
-    border-top: 1px solid black;
-    margin-top: 1px;
-    padding-top: 0.2em;
     text-align: center;
+    position: relative;
+    height: 1.38em;
+    padding-top: 0.38em;
 
-    &:before {
-      display: block;
-      position: relative;
-      top: -0.34em;
-      font-size: 0.5em;
-      line-height: 0em;
-      content: '\27A4';
-      text-align: right;
+    & .mq-arrow {
+      top: -0.1em;
+      position: absolute;
+      width: 100%;
+      height: 0.45em;
+      overflow: hidden;
+
+      &.mq-arrow-left {
+        left: 0;
+      }
+
+      &.mq-arrow-right {
+        right: 0;
+      }
+
+      & svg {
+        width: 100%;
+        height: inherit;
+        display: block;
+        position: absolute;
+      }
     }
-    &.mq-arrow-left:before {
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
-      filter: FlipH;
-      -ms-filter: "FlipH";
+    
+    &.mq-arrow-both{
+      & .mq-arrow-left {
+        width: 50.2%;
+      }
+
+      & .mq-arrow-right {
+        width: 50.2%;
+      }
     }
-    &.mq-arrow-both {
-      vertical-align: text-bottom;
+
+    & .mq-overarrow-text {
+      display: inline-block;
+      min-width: 0.888em;
+    }
+  }
+
+  .mq-xrightarrow {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 0 0.22em;
+
+    .mq-xrightarrow-right {
+      width: 100%;
+      min-width: 1.2em;
+      height: 0.452em;
+      overflow: hidden;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    .mq-xrightarrow-text {
+      font-size: 0.95rem;
 
       &.mq-empty {
-        min-height: 1.23em;
+        min-width: 0.8em;
+      }
 
-        &:after {
-          top: -0.34em;
-        }
+      &.top {
+        margin-bottom: 0.18rem;
       }
-      &:before {
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
+
+      &.bottom {
+        margin-top: 0.18rem;
       }
-      &:after {
-        display: block;
-        position: relative;
-        top: -2.3em;
-        font-size: 0.5em;
-        line-height: 0em;
-        content: "\27A4";
-        visibility: visible; //must override .mq-editable-field.mq-empty:after
-        text-align: right;
-      }
+    }
+    
+    svg {
+      width: 100%;
+      height: inherit;
+      position: absolute;
     }
   }
 
