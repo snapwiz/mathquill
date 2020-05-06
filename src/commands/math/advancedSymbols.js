@@ -258,6 +258,8 @@ LatexCmds.diverges = LatexCmds.uarr = LatexCmds.uparrow =
 
 LatexCmds.uArr = LatexCmds.Uparrow = bind(VanillaSymbol,'\\Uparrow ','&uArr;');
 
+LatexCmds.rightleftharpoons = bind(VanillaSymbol, '\\rightleftharpoons', '&#x21CB;');
+
 LatexCmds.to = bind(BinaryOperator,'\\to ','&rarr;');
 
 LatexCmds.rarr = LatexCmds.rightarrow = bind(VanillaSymbol,'\\rightarrow ','&rarr;');
