@@ -361,6 +361,16 @@ LatexCmds.Upsih = //'cos it makes sense to me
   bind(Symbol,'\\Upsilon ','<var style="font-family: serif">&upsih;</var>'); //Symbola's 'upsilon with a hook' is a capital Y without hooks :(
 
 //other symbols with the same LaTeX command and HTML character entity reference
+LatexCmds.Alpha=
+LatexCmds.Epsilon=
+LatexCmds.Zeta=
+LatexCmds.Eta=
+LatexCmds.Iota=
+LatexCmds.Kappa=
+LatexCmds.Rho=
+LatexCmds.Tau=
+LatexCmds.Beta=
+LatexCmds.Chi=
 LatexCmds.Gamma =
 LatexCmds.Delta =
 LatexCmds.Theta =

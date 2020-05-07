@@ -207,7 +207,7 @@ LatexCmds.undersim = P(MathCommand, function(_, super_) {
       );
   };
 });
-
+LatexCmds.overset =
 LatexCmds.underset = P(MathCommand, function(_, super_) {
   _.ctrlSeq = '\\underset';
   _.htmlTemplate =
