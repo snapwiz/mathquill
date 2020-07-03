@@ -1023,7 +1023,9 @@ Environments.matrix = P(Environment, function(_, super_) {
   var delimiters = {
     column: '&',
     row: '\\\\'
-  };
+  },
+  className = "mq-matrix";
+  
   _.parentheses = {
     left: null,
     right: null
@@ -1077,7 +1079,7 @@ Environments.matrix = P(Environment, function(_, super_) {
     });
 
     this.htmlTemplate =
-        '<span class="mq-matrix mq-non-leaf">'
+        '<span class="' + this.className + ' mq-non-leaf">'
       +   parenHtml(this.parentheses.left)
       +   '<table class="mq-non-leaf">'
       +     trs.replace(/\$tds/g, function () {
@@ -1433,6 +1435,30 @@ Environments.Vmatrix = P(Matrix, function(_, super_) {
   _.parentheses = {
     left: '&#8214;',
     right: '&#8214;'
+  };
+});
+
+Environments.almatrix = P(Matrix, function (_, super_) {
+  _.environment = "almatrix";
+  _.parentheses = {
+    left: "{",
+    right: "",
+  };
+  _.className = "mq-matrix mq-matrix-array mq-matrix-array-left";
+  _.createBlocks = function () {
+    this.blocks = [MatrixCell(0, this), MatrixCell(1, this)];
+  };
+});
+
+Environments.armatrix = P(Matrix, function (_, super_) {
+  _.environment = "armatrix";
+  _.parentheses = {
+    left: "",
+    right: "}",
+  };
+  _.className = "mq-matrix mq-matrix-array mq-matrix-array-right";
+  _.createBlocks = function () {
+    this.blocks = [MatrixCell(0, this), MatrixCell(1, this)];
   };
 });
 
