@@ -1023,9 +1023,9 @@ Environments.matrix = P(Environment, function(_, super_) {
   var delimiters = {
     column: '&',
     row: '\\\\'
-  },
-  className = "mq-matrix";
-  
+  };
+
+  _.className = "mq-matrix";
   _.parentheses = {
     left: null,
     right: null
@@ -1079,7 +1079,7 @@ Environments.matrix = P(Environment, function(_, super_) {
     });
 
     this.htmlTemplate =
-        '<span class="' + this.className + ' mq-non-leaf">'
+        '<span class="' + this.className  + ' mq-non-leaf">'
       +   parenHtml(this.parentheses.left)
       +   '<table class="mq-non-leaf">'
       +     trs.replace(/\$tds/g, function () {
