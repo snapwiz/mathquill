@@ -689,23 +689,32 @@ var Bracket = P(P(MathCommand, DelimsMixin), function(_, super_) {
     this.sides = {};
     this.sides[L] = { ch: open, ctrlSeq: ctrlSeq };
     this.sides[R] = { ch: close, ctrlSeq: end };
+    this.isRightBracket = close === '}' && this.side === R;
   };
   _.numBlocks = function() { return 1; };
   _.html = function() { // wait until now so that .side may
+    var _left = 
+        '<span class="mq-scaled mq-paren'+(this.side === R ? ' mq-ghost' : '')+'">'
+      +   this.sides[L].ch
+      + '</span>';
+    var _center = '<span class="mq-non-leaf">&0</span>';
+
     this.htmlTemplate = // be set by createLeftOf or parser
         '<span class="mq-non-leaf">'
-      +   '<span class="mq-scaled mq-paren'+(this.side === R ? ' mq-ghost' : '')+'">'
-      +     this.sides[L].ch
-      +   '</span>'
-      +   '<span class="mq-non-leaf">&0</span>'
-      +   '<span class="mq-scaled mq-paren'+(this.side === L ? ' mq-ghost' : '')+'">'
-      +     this.sides[R].ch
+      +   (this.isRightBracket ? '' : _left)
+      +   (this.isRightBracket ? '' : _center)
+      +  '<span class="mq-scaled mq-paren'+(this.side === L ? ' mq-ghost' : '')+'">'
+      +    this.sides[R].ch
       +   '</span>'
       + '</span>'
     ;
+
     return super_.html.call(this);
   };
   _.latex = function() {
+    if (this.isRightBracket) {
+      return this.ends[L].latex()+this.sides[R].ctrlSeq;
+    }
     return '\\left'+this.sides[L].ctrlSeq+this.ends[L].latex()+'\\right'+this.sides[R].ctrlSeq;
   };
   _.matchBrack = function(opts, expectedSide, node) {
