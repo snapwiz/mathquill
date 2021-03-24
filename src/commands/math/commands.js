@@ -546,6 +546,22 @@ LatexCmds.integral = P(SummationNotation, function(_, super_) {
   _.createLeftOf = MathCommand.p.createLeftOf;
 });
 
+LatexCmds['indefinite'] =
+LatexCmds.indefinite = P(MathCommand, function(_, super_) {
+  _.init = function() {
+    var htmlTemplate =
+      '<span class="mq-int mq-non-leaf">'
+    +   '<big>&int;</big>'
+    +   '<span class="mq-indefinite">&0</span>'
+    + '</span>'
+    ;
+    Symbol.prototype.init.call(this, '\\indefinite', htmlTemplate);
+  };
+  _.latex = function() {
+    return this.ctrlSeq + '{' + this.ends[L].latex() + '}'
+  };
+});
+
 var Fraction =
 LatexCmds.frac =
 LatexCmds.dfrac =
