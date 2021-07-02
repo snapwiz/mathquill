@@ -326,3 +326,6 @@ LatexCmds.deg = LatexCmds.degree = bind(VanillaSymbol,'\\degree ','&deg;');
 
 LatexCmds.ang = LatexCmds.angle = bind(VanillaSymbol,'\\angle ','&ang;');
 LatexCmds.measuredangle = bind(VanillaSymbol,'\\measuredangle ','&#8737;');
+
+LatexCmds.square = bind(VanillaSymbol, '\\square', '<span class="mq-non-leaf mq-square" />');
+LatexCmds.newline = bind(VanillaSymbol, '\\newline', '<span class="mq-non-leaf mq-newline" />');
