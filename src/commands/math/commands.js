@@ -78,9 +78,9 @@ LatexCmds.mathsf = bind(Style, '\\mathsf', 'span', 'class="mq-sans-serif mq-font
 LatexCmds.mathtt = bind(Style, '\\mathtt', 'span', 'class="mq-monospace mq-font"');
 //text-decoration
 LatexCmds.underline = bind(Style, '\\underline', 'span', 'class="mq-non-leaf mq-underline"');
+
 LatexCmds.overline = LatexCmds.bar = bind(Style, '\\overline', 'span', 'class="mq-non-leaf mq-overline"');
 LatexCmds.overarc = bind(Style, '\\overarc', 'span', 'class="mq-non-leaf mq-overarc"');
-
 // LatexCmds.overleftrightarrow = bind(Style, '\\overleftrightarrow', 'span', 'class="mq-non-leaf mq-overarrow mq-arrow-both"');
 // LatexCmds.overrightarrow = bind(Style, '\\overrightarrow', 'span', 'class="mq-non-leaf mq-overarrow mq-arrow-right"');
 // LatexCmds.overleftarrow = bind(Style, '\\overleftarrow', 'span', 'class="mq-non-leaf mq-overarrow mq-arrow-left"');
@@ -190,12 +190,6 @@ LatexCmds.dot = P(MathCommand, function(_, super_) {
             + '</span></span>'
         );
     };
-});
-
-LatexCmds.square = P(MathCommand, function(_, super_){
-  _.init = function() {
-    super_.init.call(this, '\\square', '<span class="mq-non-leaf mq-square" />');
-  };
 });
 
 LatexCmds.undersim = P(MathCommand, function(_, super_) {
