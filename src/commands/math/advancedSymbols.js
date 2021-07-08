@@ -329,3 +329,17 @@ LatexCmds.measuredangle = bind(VanillaSymbol,'\\measuredangle ','&#8737;');
 
 LatexCmds.square = bind(VanillaSymbol, '\\square', '<span class="mq-non-leaf mq-square" />');
 LatexCmds.newline = bind(VanillaSymbol, '\\newline', '<span class="mq-non-leaf mq-newline" />');
+
+var arrowsHtml = `
+  <span class="mq-non-leaf mq-rightleftarrows">
+    <svg width="1rem" height="1rem" viewBox="0 0 24 21" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.823000, -0.000000)" fill="currentColor" fill-rule="nonzero">
+          <path d="M5.403,-7.47669874e-14 L5.402,4 L23.177,4 L23.177,6 L5.402,6 L5.403,10.453 L0.177,5.226 L5.403,-7.47669874e-14 Z" transform="translate(11.677000, 5.226500) scale(-1, 1) translate(-11.677000, -5.226500) "></path>
+          <path d="M17.774,10.115 L23,15.341 L17.774,20.567 L17.774,16.115 L0,16.115 L0,14.115 L17.774,14.115 L17.774,10.115 Z" transform="translate(11.500000, 15.341000) scale(-1, 1) translate(-11.500000, -15.341000) "></path>
+        </g>
+      </g>
+    </svg>
+  </span>` 
+LatexCmds.rightleftarrows = bind(VanillaSymbol, '\\rightleftarrows', arrowsHtml);
