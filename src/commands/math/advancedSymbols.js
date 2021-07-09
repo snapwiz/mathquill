@@ -279,6 +279,9 @@ LatexCmds.lArr = LatexCmds.Leftarrow = bind(VanillaSymbol,'\\Leftarrow ','&lArr;
 LatexCmds.harr = LatexCmds.lrarr = LatexCmds.leftrightarrow =
   bind(VanillaSymbol,'\\leftrightarrow ','&harr;');
 
+LatexCmds.nharr = LatexCmds.nlrarr = LatexCmds.nleftrightarrow =
+bind(VanillaSymbol,'\\nleftrightarrow ','&#8622;');
+
 LatexCmds.iff = bind(BinaryOperator,'\\Leftrightarrow ','&hArr;');
 
 LatexCmds.hArr = LatexCmds.lrArr = LatexCmds.Leftrightarrow =
