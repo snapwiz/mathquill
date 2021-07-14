@@ -3,6 +3,11 @@ LatexCmds.veebar = LatexCmds.xor = bind(VanillaSymbol, '\\veebar ', '&#8891;');
 LatexCmds.nrarr = LatexCmds.nrarr = LatexCmds.nrightarrow =
     bind(VanillaSymbol, '\\nrightarrow ', '&#8603;');
 LatexCmds.nlarr = LatexCmds.nleftarrow = bind(VanillaSymbol, '\\nleftarrow ', '&#8602;');
+
+LatexCmds.oiint = bind(VanillaSymbol, '\\oiint ', '&#8751;');
+LatexCmds.oiiint = bind(VanillaSymbol, '\\oiiint ', '&#8752;');
+
+
 LatexCmds.square = bind(VanillaSymbol, '\\square', '<span class="mq-non-leaf mq-square" />');
 LatexCmds.newline = bind(VanillaSymbol, '\\newline', '<span class="mq-non-leaf mq-newline" />');
 
