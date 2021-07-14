@@ -144,3 +144,7 @@ var SummationUpperNotation = P(MathCommand, function (_, super_) {
 
 LatexCmds.sumUpper =
     LatexCmds.summationUpper = bind(SummationUpperNotation, '\\summationUpper', '&sum;');
+
+LatexCmds.prodSymbol = bind(VanillaSymbol, '\\prodSymbol', '<span class="mq-large-operator mq-non-leaf"><big>&prod;</big></span>');
+LatexCmds.prodLower = bind(SummationLowerNotation, '\\prodLower', '&prod;');
+LatexCmds.prodUpper = bind(SummationUpperNotation, '\\prodUpper', '&prod;');
