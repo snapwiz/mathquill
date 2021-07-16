@@ -279,6 +279,9 @@ LatexCmds.lArr = LatexCmds.Leftarrow = bind(VanillaSymbol,'\\Leftarrow ','&lArr;
 LatexCmds.harr = LatexCmds.lrarr = LatexCmds.leftrightarrow =
   bind(VanillaSymbol,'\\leftrightarrow ','&harr;');
 
+LatexCmds.nharr = LatexCmds.nlrarr = LatexCmds.nleftrightarrow =
+bind(VanillaSymbol,'\\nleftrightarrow ','&#8622;');
+
 LatexCmds.iff = bind(BinaryOperator,'\\Leftrightarrow ','&hArr;');
 
 LatexCmds.hArr = LatexCmds.lrArr = LatexCmds.Leftrightarrow =
@@ -326,6 +329,3 @@ LatexCmds.deg = LatexCmds.degree = bind(VanillaSymbol,'\\degree ','&deg;');
 
 LatexCmds.ang = LatexCmds.angle = bind(VanillaSymbol,'\\angle ','&ang;');
 LatexCmds.measuredangle = bind(VanillaSymbol,'\\measuredangle ','&#8737;');
-
-LatexCmds.square = bind(VanillaSymbol, '\\square', '<span class="mq-non-leaf mq-square" />');
-LatexCmds.newline = bind(VanillaSymbol, '\\newline', '<span class="mq-non-leaf mq-newline" />');
